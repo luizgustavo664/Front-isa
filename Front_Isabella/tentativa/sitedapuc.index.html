@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adidas - Loja de Tênis</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="implementacao.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Adidas - Loja de Tênis</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Masculino</a>
+        <a href="#">Feminino</a>
+        <a href="#">Novidades</a>
+    </nav>
+
+    <!-- Carrossel de Imagens -->
+    <div class="carousel-container">
+        <div class="carousel">
+            <img src="https://via.placeholder.com/800x250?text=T%C3%AAnis+Adidas+1" alt="Imagem do Tênis Adidas Modelo 1">
+            <img src="https://via.placeholder.com/800x250?text=T%C3%AAnis+Adidas+2" alt="Imagem do Tênis Adidas Modelo 2">
+            <img src="https://via.placeholder.com/800x250?text=T%C3%AAnis+Adidas+3" alt="Imagem do Tênis Adidas Modelo 3">
+        </div>
+        <button class="carousel-btn left" onclick="prevSlide()">&#10094;</button>
+        <button class="carousel-btn right" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <!-- Filtros -->
+    <section class="filters">
+        <div class="filter">
+            <label for="modelFilter">Modelo:</label>
+            <select id="modelFilter" onchange="filterSneakers()">
+                <option value="all">Todos</option>
+                <option value="samba">Samba</option>
+                <option value="gazelle">Gazelle</option>
+                <option value="adi2000">Adi 2000</option>
+                <option value="superstar">Superstar</option>
+                <option value="campus">Campus</option>
+            </select>
+        </div>
+
+        <div class="filter">
+            <label for="sizeFilter">Tamanho:</label>
+            <select id="sizeFilter" onchange="filterSneakers()">
+                <option value="all">Todos</option>
+                <option value="36-37">36-37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+            </select>
+        </div> 
+
+        <div class="filter">
+            <label for="colorFilter">Cor:</label>
+            <select id="colorFilter" onchange="filterSneakers()">
+                <option value="all">Todas</option>
+                <option value="branco">Branco</option>
+                <option value="preto">Preto</option>
+                <option value="rosa">Rosa</option>
+                <option value="verde">Verde</option>
+                <option value="azul">Azul</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- Seção de Tênis -->
+    <section class="sneakers">
+        <div class="sneaker" data-model="samba" data-size="38" data-color="branco">
+            <img src="https://via.placeholder.com/200x200" alt="Adidas Samba">
+            <h2>Samba</h2>
+            <p>R$ 499,90</p>
+            <button>Comprar</button>
+        </div>
+        <div class="sneaker" data-model="gazelle" data-size="39" data-color="preto">
+            <img src="https://via.placeholder.com/200x200" alt="Adidas Gazelle">
+            <h2>Gazelle</h2>
+            <p>R$ 399,90</p>
+            <button>Comprar</button>
+        </div>
+        <div class="sneaker" data-model="adi2000" data-size="40" data-color="rosa">
+            <img src="https://via.placeholder.com/200x200" alt="Adidas Adi 2000">
+            <h2>Adi 2000</h2>
+            <p>R$ 599,90</p>
+            <button>Comprar</button>
+        </div>
+    </section> 
+    <table id="adidas_tenisadidas" style="width: 100%; margin-top: 20px; border-collapse: collapse;">
+
+
+            <tbody>
+
+        </tbody>  
+    
+    </table>
+    <footer>
+        <p>&copy; 2024 Adidas. Todos os direitos reservados.</p>
+    </footer>
+</body>
+    <div id="output"></div>
+</html>
